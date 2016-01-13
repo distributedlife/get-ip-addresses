@@ -7,11 +7,13 @@ npm i get-ip-addresses -S
 ~~~
 
 ## Use
+### ES6
 ~~~es6
 import getIpAddresses from 'get-ip-addresses';
 console.log(getIpAddresses());
 ~~~
 
+### Ye Olde
 ~~~javascript
 var getIpAddresses = require('get-ip-addresses').getIpAddresses;
 console.log(getIpAddresses());
