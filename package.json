@@ -20,7 +20,8 @@
   "license": "MIT",
   "scripts": {
     "test": "mocha --require tests/babel-hook.js tests",
-    "prepublish": "babel src --out-dir lib"
+    "prepublish": "babel src --out-dir lib",
+    "prepare": "npm run prepublish"
   },
   "babel": {
     "presets": [
