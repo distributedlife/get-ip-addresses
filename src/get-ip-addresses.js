@@ -5,7 +5,7 @@ import {map, filter, flatten} from 'lodash';
 
 let ifaces = os.networkInterfaces();
 
-export default function getIpAddresses (refresh = false) {
+export default function getIpAddresses(refresh = false) {
   if (refresh) {
     ifaces = os.networkInterfaces();
   }
