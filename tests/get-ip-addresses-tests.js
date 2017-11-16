@@ -5,7 +5,7 @@ import os from 'os';
 import proxyquire from 'proxyquire';
 import sinon from 'sinon';
 
-describe('get ip addresses', function() {
+describe('get ip addresses', () => {
   let spy;
   let getIpAddresses;
 
@@ -21,7 +21,7 @@ describe('get ip addresses', function() {
     spy.restore();
   });
 
-	it('works on my machine', function() {
+	it('works on my machine', () => {
     // Arrange
 
     // Act
