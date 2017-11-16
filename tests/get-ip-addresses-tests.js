@@ -11,17 +11,15 @@ describe('get ip addresses', () => {
 
   beforeEach(() => {
     spy = sinon.spy(os, 'networkInterfaces');
-    getIpAddresses = proxyquire('../src/get-ip-addresses', {
-      'os' : os
-    }).default;
-    spy.reset();    
+    getIpAddresses = proxyquire('../src/get-ip-addresses', {'os': os}).default;
+    spy.reset();
   });
 
   afterEach(() => {
     spy.restore();
   });
 
-	it('works on my machine', () => {
+  it('works on my machine', () => {
     // Arrange
 
     // Act
@@ -30,12 +28,12 @@ describe('get ip addresses', () => {
     // Assert
     expect(addresses.length).toNotEqual(0);
   });
-  
+
   it('should not refresh if no parameters are given', () => {
     // Arrange
 
     // Act
-    const addresses = getIpAddresses();    
+    const addresses = getIpAddresses();
 
     // Assert
     expect(spy.called).toBeFalsy();
